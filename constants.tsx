@@ -24,7 +24,8 @@ const generateYearWinners = (year: number): AwardYear => {
         { name: 'Aryav Agrawal', placement: 'First' },
         { name: 'Sanya Iyer', placement: 'Second' },
         { name: 'Li Wei', placement: 'Third' }
-      ]
+      ],
+      summary: "The 2025 award cycle featured a historic pool of 100+ exceptional nominees competing for top honors."
     };
   }
 

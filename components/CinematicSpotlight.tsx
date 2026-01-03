@@ -12,7 +12,7 @@ const CinematicSpotlight: React.FC = () => {
   /**
    * Helper function to poll the status of a video generation operation.
    */
-  const pollOperation = async (ai: GoogleGenAI, initialOperation: any) => {
+  const pollOperation = async (ai: any, initialOperation: any) => {
     let operation = initialOperation;
     while (!operation.done) {
       await new Promise(resolve => setTimeout(resolve, 10000));
@@ -132,9 +132,15 @@ const CinematicSpotlight: React.FC = () => {
           {videoUrl && <span className="px-2 py-1 bg-blue-500/20 text-blue-400 text-[10px] rounded border border-blue-500/30">AI GENERATED BIO</span>}
         </div>
         <h2 className="text-4xl md:text-5xl font-serif font-bold text-white mb-6">Aryav Agrawal</h2>
-        <p className="text-lg text-slate-300 mb-8 leading-relaxed italic">
+        <p className="text-lg text-slate-300 mb-6 leading-relaxed italic">
           "Humanity flourishes when we bridge the gaps in our community. Every small act of service creates a ripple that can eventually move oceans."
         </p>
+        <div className="bg-blue-900/40 border border-blue-500/30 rounded-2xl p-4 mb-8">
+          <p className="text-blue-300 text-sm font-medium">
+            <span className="text-white font-bold mr-2">Competition Scale:</span>
+            Aryav was selected from a record-breaking field of <span className="text-white font-bold">100+ nominees</span> competing in the 2025 cycle.
+          </p>
+        </div>
         <div className="flex flex-wrap gap-4">
           <Link to="/archive" className="text-blue-400 font-semibold flex items-center group">
             View All 2025 Winners
