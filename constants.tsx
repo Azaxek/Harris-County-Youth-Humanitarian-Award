@@ -25,7 +25,7 @@ const generateYearWinners = (year: number): AwardYear => {
         { name: 'Sanya Iyer', placement: 'Second' },
         { name: 'Li Wei', placement: 'Third' }
       ],
-      summary: "The 2025 award cycle featured a historic pool of 100+ exceptional nominees competing for top honors."
+      summary: "First place recipient Aryav Agrawal built 270 home satellite storm detectors near NASA JSC, processing 25K+ data points for humanitarian space tech application."
     };
   }
 

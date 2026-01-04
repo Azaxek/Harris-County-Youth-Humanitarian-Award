@@ -12,30 +12,31 @@ const Apply: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form Submitted:', formData);
+    console.log('Form Submission Logged:', formData);
     setSubmitted(true);
     window.scrollTo(0, 0);
   };
 
   if (submitted) {
     return (
-      <div className="min-h-[60vh] flex items-center justify-center px-4">
-        <div className="text-center max-w-md animate-fadeIn">
-          <div className="w-20 h-20 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
-            <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+      <div className="min-h-[60vh] flex items-center justify-center px-4 bg-slate-50">
+        <div className="text-center max-w-md p-10 bg-white border-2 border-slate-300 shadow-sm">
+          <div className="w-16 h-16 bg-blue-100 text-blue-900 border border-blue-200 flex items-center justify-center mx-auto mb-6">
+            <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
             </svg>
           </div>
-          <h2 className="text-3xl font-serif font-bold text-slate-900 mb-4">Application Received!</h2>
-          <p className="text-slate-600 mb-8">
-            Thank you for your submission for the 2026 Harris County Youth Humanitarian Award. 
-            The committee will review your application after the March 2026 deadline.
+          <h2 className="text-2xl font-serif font-bold text-slate-900 mb-2">Submission Successful</h2>
+          <p className="text-xs font-bold text-slate-500 uppercase tracking-widest mb-6">REF: {Math.floor(Math.random() * 999999)}</p>
+          <p className="text-sm text-slate-600 mb-8 leading-relaxed">
+            The 2026 nomination for <span className="font-bold">{formData.name}</span> has been successfully logged 
+            in our database. Please allow 4-6 weeks after the deadline for committee review.
           </p>
           <button 
             onClick={() => setSubmitted(false)}
-            className="text-blue-700 font-semibold hover:underline"
+            className="text-xs font-bold uppercase text-blue-800 underline hover:text-blue-600"
           >
-            Submit another nomination
+            Submit Additional Nomination Form
           </button>
         </div>
       </div>
@@ -44,117 +45,110 @@ const Apply: React.FC = () => {
 
   return (
     <div className="pb-24">
-      {/* Header */}
-      <div className="bg-blue-700 py-16 text-white overflow-hidden relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <h1 className="text-4xl md:text-5xl font-serif font-bold mb-4">2026 Nominations</h1>
-          <p className="text-blue-100 text-lg max-w-2xl">
-            Help us identify the leaders of tomorrow. Applications and nominations for the 2026 award cycle are now open.
+      {/* Header - Corporate Style */}
+      <div className="bg-blue-900 py-16 text-white border-b-4 border-blue-950">
+        <div className="max-w-6xl mx-auto px-4">
+          <h1 className="text-3xl md:text-5xl font-serif font-bold mb-4">Official 2026 Nomination Portal</h1>
+          <p className="text-blue-100 text-sm max-w-2xl leading-relaxed">
+            Electronic submission form for the 2026 Harris County Youth Humanitarian Award. 
+            All fields marked with an asterisk (*) are mandatory for processing.
           </p>
-          <div className="mt-8 inline-flex items-center px-4 py-2 bg-blue-800 rounded-lg text-sm font-medium">
-            <span className="w-2 h-2 rounded-full bg-red-400 animate-pulse mr-3"></span>
-            Deadline: March 31, 2026
+          <div className="mt-8 inline-flex items-center px-4 py-2 bg-blue-800 border border-blue-700 text-[11px] font-bold uppercase tracking-widest">
+            <span className="w-2 h-2 bg-red-500 mr-3"></span>
+            SUBMISSION DEADLINE: MARCH 31, 2026
           </div>
-        </div>
-        <div className="absolute top-0 right-0 w-1/3 h-full opacity-20 pointer-events-none">
-          <svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
-             <path d="M0,0 L100,0 L100,100 Z" fill="white" />
-          </svg>
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16 flex flex-col lg:flex-row gap-16">
+      <div className="max-w-6xl mx-auto px-4 mt-16 flex flex-col lg:flex-row gap-12">
         <div className="lg:w-2/3">
-          <form onSubmit={handleSubmit} className="bg-white p-8 md:p-12 rounded-3xl shadow-xl border border-slate-100">
-            <h2 className="text-2xl font-serif font-bold text-slate-900 mb-8">Nomination Form</h2>
+          <form onSubmit={handleSubmit} className="bg-white p-8 md:p-12 border-2 border-slate-300 shadow-sm">
+            <h2 className="text-xl font-serif font-bold text-slate-900 mb-8 border-b border-slate-200 pb-4 uppercase tracking-tight">Form 2026-A: Nomination Details</h2>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
               <div>
-                <label className="block text-sm font-semibold text-slate-700 mb-2">Full Name</label>
+                <label className="block text-[11px] font-bold text-slate-600 uppercase mb-2">Full Name *</label>
                 <input 
                   required
                   type="text" 
-                  placeholder="John Doe"
-                  className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-500 outline-none transition-all"
+                  className="w-full px-4 py-2 border border-slate-300 bg-slate-50 font-sans text-sm focus:border-blue-800 outline-none"
                   value={formData.name}
                   onChange={(e) => setFormData({...formData, name: e.target.value})}
                 />
               </div>
               <div>
-                <label className="block text-sm font-semibold text-slate-700 mb-2">Age / Grade</label>
+                <label className="block text-[11px] font-bold text-slate-600 uppercase mb-2">Age / Grade Level *</label>
                 <input 
                   required
                   type="text" 
-                  placeholder="17 / 12th Grade"
-                  className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-500 outline-none transition-all"
+                  placeholder="e.g. 17 / 12th"
+                  className="w-full px-4 py-2 border border-slate-300 bg-slate-50 font-sans text-sm focus:border-blue-800 outline-none"
                   value={formData.age}
                   onChange={(e) => setFormData({...formData, age: e.target.value})}
                 />
               </div>
             </div>
 
-            <div className="mb-8">
-              <label className="block text-sm font-semibold text-slate-700 mb-2">Email Address</label>
+            <div className="mb-6">
+              <label className="block text-[11px] font-bold text-slate-600 uppercase mb-2">Contact Email *</label>
               <input 
                 required
                 type="email" 
-                placeholder="email@example.com"
-                className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-500 outline-none transition-all"
+                className="w-full px-4 py-2 border border-slate-300 bg-slate-50 font-sans text-sm focus:border-blue-800 outline-none"
                 value={formData.email}
                 onChange={(e) => setFormData({...formData, email: e.target.value})}
               />
             </div>
 
-            <div className="mb-8">
-              <label className="block text-sm font-semibold text-slate-700 mb-2">Description of Humanitarian Work</label>
+            <div className="mb-10">
+              <label className="block text-[11px] font-bold text-slate-600 uppercase mb-2">Service Impact Statement *</label>
               <textarea 
                 required
-                rows={6}
-                placeholder="Tell us about the impact, projects, and dedication of the nominee..."
-                className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-500 outline-none transition-all resize-none"
+                rows={8}
+                placeholder="Provide a detailed log of service impact, including dates and outcomes..."
+                className="w-full px-4 py-3 border border-slate-300 bg-slate-50 font-sans text-sm focus:border-blue-800 outline-none resize-none"
                 value={formData.workDescription}
                 onChange={(e) => setFormData({...formData, workDescription: e.target.value})}
               ></textarea>
             </div>
 
-            <button type="submit" className="w-full py-4 bg-blue-700 text-white font-bold rounded-xl hover:bg-blue-800 transition-all shadow-lg shadow-blue-200">
-              Submit Nomination
+            <button type="submit" className="w-full py-4 bg-blue-800 text-white font-bold uppercase text-xs tracking-widest hover:bg-blue-900 border-b-4 border-blue-950 transition-all">
+              Execute Submission
             </button>
           </form>
         </div>
 
-        <div className="lg:w-1/3 space-y-12">
-          <div>
-            <h3 className="text-xl font-bold text-slate-900 mb-6">Contact Information</h3>
+        <div className="lg:w-1/3 space-y-8">
+          <div className="bg-slate-50 p-8 border border-slate-300">
+            <h3 className="text-xs font-bold text-slate-500 uppercase mb-6 tracking-widest">Administrative Context</h3>
             <div className="space-y-6">
               <div className="flex items-start">
-                <div className="w-10 h-10 bg-blue-50 text-blue-700 rounded-lg flex items-center justify-center shrink-0 mr-4">
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" strokeWidth="2" /></svg>
-                </div>
+                <div className="w-8 h-8 bg-white border border-slate-300 flex items-center justify-center shrink-0 mr-4 font-mono font-bold text-xs text-blue-900">@</div>
                 <div>
-                  <p className="text-sm font-semibold text-slate-900">Email Us</p>
-                  <p className="text-slate-500">awards@harriscounty.gov</p>
+                  <p className="text-[10px] font-bold text-slate-900 uppercase">Electronic Mail</p>
+                  <p className="text-xs text-slate-500 underline">awards@harriscounty.gov</p>
                 </div>
               </div>
               <div className="flex items-start">
-                <div className="w-10 h-10 bg-blue-50 text-blue-700 rounded-lg flex items-center justify-center shrink-0 mr-4">
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" strokeWidth="2" /></svg>
-                </div>
+                <div className="w-8 h-8 bg-white border border-slate-300 flex items-center justify-center shrink-0 mr-4 font-mono font-bold text-xs text-blue-900">#</div>
                 <div>
-                  <p className="text-sm font-semibold text-slate-900">Call Us</p>
-                  <p className="text-slate-500">(713) 274-1100</p>
+                  <p className="text-[10px] font-bold text-slate-900 uppercase">Telephone Inquiry</p>
+                  <p className="text-xs text-slate-500">(713) 274-1100</p>
                 </div>
               </div>
               <div className="flex items-start">
-                <div className="w-10 h-10 bg-blue-50 text-blue-700 rounded-lg flex items-center justify-center shrink-0 mr-4">
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" strokeWidth="2" /><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" strokeWidth="2" /></svg>
-                </div>
+                <div className="w-8 h-8 bg-white border border-slate-300 flex items-center justify-center shrink-0 mr-4 font-mono font-bold text-xs text-blue-900">!</div>
                 <div>
-                  <p className="text-sm font-semibold text-slate-900">Office</p>
-                  <p className="text-slate-500">1001 Preston St, Houston, TX 77002</p>
+                  <p className="text-[10px] font-bold text-slate-900 uppercase">Headquarters</p>
+                  <p className="text-xs text-slate-500">1001 Preston St, Houston, TX 77002</p>
                 </div>
               </div>
             </div>
+          </div>
+          
+          <div className="p-6 border border-slate-200 text-slate-500 text-[10px] leading-relaxed italic">
+            Disclaimer: Harris County is an Equal Opportunity Employer. All award nominations are handled with 
+            strict confidentiality in accordance with local privacy statutes.
           </div>
         </div>
       </div>

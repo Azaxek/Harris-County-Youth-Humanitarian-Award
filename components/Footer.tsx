@@ -5,23 +5,24 @@ import { NAV_ITEMS } from '../constants';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-slate-900 text-slate-300 py-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-          <div>
-            <h3 className="text-white font-serif font-bold text-xl mb-4">Harris County Youth Humanitarian Award</h3>
-            <p className="text-sm leading-relaxed text-slate-400">
-              Celebrating and empowering the next generation of humanitarian leaders in our community since 2005. 
-              Inspiring change, one student at a time.
+    <footer className="bg-slate-200 border-t-4 border-slate-300 py-12 text-slate-700">
+      <div className="max-w-6xl mx-auto px-4">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="col-span-2">
+            <h3 className="font-serif font-bold text-lg text-slate-900 mb-4">Harris County Youth Humanitarian Award</h3>
+            <p className="text-xs leading-relaxed max-w-md">
+              The program recognizes students for their significant contributions to humanitarian work. 
+              Founded in 2005 by the county executive committee. All award decisions are final and 
+              based on criteria established in the official handbook.
             </p>
           </div>
           
           <div>
-            <h4 className="text-white font-semibold mb-4">Quick Links</h4>
+            <h4 className="font-bold text-xs uppercase mb-4 text-slate-500">Navigation</h4>
             <ul className="space-y-2">
               {NAV_ITEMS.map((item) => (
                 <li key={item.path}>
-                  <Link to={item.path} className="text-sm hover:text-white transition-colors">
+                  <Link to={item.path} className="text-[11px] font-bold hover:text-blue-800 underline">
                     {item.label}
                   </Link>
                 </li>
@@ -30,22 +31,19 @@ const Footer: React.FC = () => {
           </div>
           
           <div>
-            <h4 className="text-white font-semibold mb-4">Contact Us</h4>
-            <p className="text-sm text-slate-400">
-              Email: info@harriscountyyouth.org<br />
+            <h4 className="font-bold text-xs uppercase mb-4 text-slate-500">Contact/Location</h4>
+            <p className="text-[11px] leading-relaxed">
+              <strong>Administration:</strong><br />
+              1001 Preston St, Houston, TX 77002<br />
               Phone: (713) 274-1100<br />
-              Address: 1001 Preston St, Houston, TX 77002
+              Email: info@harriscountyyouth.org
             </p>
-            <div className="mt-6 flex space-x-4">
-              <a href="#" className="text-slate-400 hover:text-white"><span className="sr-only">Facebook</span>FB</a>
-              <a href="#" className="text-slate-400 hover:text-white"><span className="sr-only">Twitter</span>TW</a>
-              <a href="#" className="text-slate-400 hover:text-white"><span className="sr-only">Instagram</span>IG</a>
-            </div>
           </div>
         </div>
         
-        <div className="mt-12 pt-8 border-t border-slate-800 text-center text-xs text-slate-500">
-          <p>&copy; {new Date().getFullYear()} Harris County Youth Humanitarian Award Committee. All rights reserved.</p>
+        <div className="mt-12 pt-8 border-t border-slate-300 flex flex-col md:flex-row justify-between items-center text-[10px] font-bold text-slate-500">
+          <p>© {new Date().getFullYear()} Harris County Administrative Offices. All Rights Reserved.</p>
+          <p className="mt-2 md:mt-0 uppercase tracking-widest">Site Last Updated: Feb 2025</p>
         </div>
       </div>
     </footer>

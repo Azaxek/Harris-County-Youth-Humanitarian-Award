@@ -4,18 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Harris County Youth Humanitarian Award</title>
+    <title>Harris County Youth Humanitarian Award - Official Site</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <style>
+        /* A senior dev knows Verdana is the king of screen readability */
         body {
-            font-family: 'Inter', sans-serif;
-            scroll-behavior: smooth;
+            font-family: Verdana, sans-serif;
+            line-height: 1.5;
+            background-color: #f4f4f4;
         }
-        .font-serif {
-            font-family: 'Playfair+Display', serif;
+        h1, h2, h3, .font-serif {
+            font-family: Georgia, serif;
+        }
+        /* Classic focus state for accessibility */
+        a:focus, button:focus {
+            outline: 2px solid #004a99;
         }
     </style>
 <script type="importmap">
@@ -32,9 +35,8 @@
 }
 </script>
 </head>
-<body class="bg-slate-50 text-slate-900">
+<body class="text-slate-800">
     <div id="root"></div>
-    <!-- The bundled JS is produced by esbuild in the build folder -->
     <script type="module" src="./index.js"></script>
 </body>
 </html>

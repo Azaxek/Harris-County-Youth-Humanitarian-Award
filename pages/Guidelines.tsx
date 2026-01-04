@@ -5,107 +5,108 @@ import { Link } from 'react-router-dom';
 const Guidelines: React.FC = () => {
   return (
     <div className="pb-24">
-      {/* Header */}
-      <div className="bg-slate-50 py-16 border-b border-slate-200">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl md:text-5xl font-serif font-bold text-slate-900 mb-4">Nomination Guidelines</h1>
-          <p className="text-xl text-slate-600">Everything you need to know about the 2026 application cycle.</p>
+      {/* Header - Documentation Style */}
+      <div className="bg-slate-200 py-12 border-b-2 border-slate-300">
+        <div className="max-w-5xl mx-auto px-4">
+          <h1 className="text-3xl font-serif font-bold text-slate-900 mb-2">Nomination Procedures & Guidelines</h1>
+          <p className="text-sm font-bold text-slate-500 uppercase tracking-widest font-mono">Document Version: 2026.01.A</p>
         </div>
       </div>
 
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 mt-16 space-y-16">
+      <div className="max-w-5xl mx-auto px-4 mt-12 space-y-12">
         {/* Eligibility Section */}
-        <section>
+        <section className="bg-white border border-slate-300 p-8 shadow-sm">
           <div className="flex items-center space-x-4 mb-8">
-            <div className="w-12 h-12 bg-blue-700 text-white rounded-xl flex items-center justify-center font-bold text-xl">01</div>
-            <h2 className="text-3xl font-serif font-bold text-slate-900">Eligibility Criteria</h2>
+            <div className="w-10 h-10 bg-slate-800 text-white flex items-center justify-center font-bold font-mono">01</div>
+            <h2 className="text-2xl font-serif font-bold text-slate-900">Eligibility Criteria</h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
-              <h3 className="font-bold text-blue-700 mb-3 text-lg">Residency</h3>
-              <p className="text-slate-600 text-sm">Nominees must be current residents of Harris County, Texas, or attend a school physically located within the county.</p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-1">
+            <div className="p-6 border border-slate-200 bg-slate-50">
+              <h3 className="font-bold text-slate-900 mb-3 text-xs uppercase tracking-wider underline">I. Residency</h3>
+              <p className="text-slate-600 text-xs leading-relaxed">Nominees must reside in Harris County, TX, or attend a verified educational institution within county boundaries.</p>
             </div>
-            <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
-              <h3 className="font-bold text-blue-700 mb-3 text-lg">Age & Status</h3>
-              <p className="text-slate-600 text-sm">Eligible candidates are high school students (9th–12th grade) during the current academic year.</p>
+            <div className="p-6 border border-slate-200 bg-slate-50">
+              <h3 className="font-bold text-slate-900 mb-3 text-xs uppercase tracking-wider underline">II. Grade Status</h3>
+              <p className="text-slate-600 text-xs leading-relaxed">Eligible candidates must be enrolled in grades 9 through 12 during the current fiscal academic year.</p>
             </div>
-            <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
-              <h3 className="font-bold text-blue-700 mb-3 text-lg">Service Period</h3>
-              <p className="text-slate-600 text-sm">Humanitarian work must show consistent engagement for at least 12 consecutive months prior to the deadline.</p>
+            <div className="p-6 border border-slate-200 bg-slate-50">
+              <h3 className="font-bold text-slate-900 mb-3 text-xs uppercase tracking-wider underline">III. Service Term</h3>
+              <p className="text-slate-600 text-xs leading-relaxed">Proof of 12 consecutive months of volunteer service is required for all primary nominations.</p>
             </div>
           </div>
         </section>
 
         {/* Process Section */}
-        <section className="bg-white rounded-3xl p-8 md:p-12 border border-slate-200 shadow-xl">
+        <section className="bg-white border-2 border-slate-300 p-10 shadow-sm">
           <div className="flex items-center space-x-4 mb-10">
-            <div className="w-12 h-12 bg-blue-700 text-white rounded-xl flex items-center justify-center font-bold text-xl">02</div>
-            <h2 className="text-3xl font-serif font-bold text-slate-900">The Nomination Process</h2>
+            <div className="w-10 h-10 bg-slate-800 text-white flex items-center justify-center font-bold font-mono">02</div>
+            <h2 className="text-2xl font-serif font-bold text-slate-900">Submission Workflow</h2>
           </div>
-          <div className="space-y-10">
-            <div className="flex gap-6">
-              <div className="shrink-0 w-8 h-8 rounded-full border-2 border-blue-700 flex items-center justify-center text-blue-700 font-bold">1</div>
+          <div className="space-y-8 text-sm">
+            <div className="flex gap-6 items-start border-b border-slate-100 pb-6">
+              <div className="font-mono font-bold text-blue-900">STEP_1</div>
               <div>
-                <h4 className="font-bold text-slate-900 text-lg mb-2">Identify a Candidate</h4>
-                <p className="text-slate-600">Consider students who have made a tangible impact. We welcome self-nominations as well as nominations from teachers, mentors, or peers.</p>
+                <h4 className="font-bold text-slate-900 uppercase text-xs mb-1">Candidate Identification</h4>
+                <p className="text-slate-600 text-xs leading-relaxed">Select a student who has demonstrated measurable impact. Self-nominations are accepted.</p>
               </div>
             </div>
-            <div className="flex gap-6">
-              <div className="shrink-0 w-8 h-8 rounded-full border-2 border-blue-700 flex items-center justify-center text-blue-700 font-bold">2</div>
+            <div className="flex gap-6 items-start border-b border-slate-100 pb-6">
+              <div className="font-mono font-bold text-blue-900">STEP_2</div>
               <div>
-                <h4 className="font-bold text-slate-900 text-lg mb-2">Prepare Supporting Documents</h4>
-                <p className="text-slate-600">Gather letters of recommendation, photos of the project, data on community impact, or any relevant media coverage.</p>
+                <h4 className="font-bold text-slate-900 uppercase text-xs mb-1">Documentation Retrieval</h4>
+                <p className="text-slate-600 text-xs leading-relaxed">Compile recommendation letters, service logs, and photographic evidence of work.</p>
               </div>
             </div>
-            <div className="flex gap-6">
-              <div className="shrink-0 w-8 h-8 rounded-full border-2 border-blue-700 flex items-center justify-center text-blue-700 font-bold">3</div>
+            <div className="flex gap-6 items-start">
+              <div className="font-mono font-bold text-blue-900">STEP_3</div>
               <div>
-                <h4 className="font-bold text-slate-900 text-lg mb-2">Submit via Online Portal</h4>
-                <p className="text-slate-600 mb-4">Complete the form on our Application page. Ensure all fields are filled accurately to avoid delays in review.</p>
-                <Link to="/apply" className="inline-flex items-center text-blue-700 font-bold hover:underline">
-                  Go to Application Page
-                  <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M14 5l7 7m0 0l-7 7m7-7H3" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" /></svg>
+                <h4 className="font-bold text-slate-900 uppercase text-xs mb-1">Final Submission</h4>
+                <p className="text-slate-600 text-xs leading-relaxed mb-4">Complete the digital form on the official application portal by the deadline.</p>
+                <Link to="/apply" className="inline-block bg-blue-800 text-white px-4 py-2 text-[10px] font-bold uppercase hover:bg-blue-900 border-b-2 border-blue-950 transition-all">
+                  Access Portal
                 </Link>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Advice/Tips Section */}
-        <section>
+        {/* Tips Section */}
+        <section className="bg-slate-800 text-white p-10 border-l-8 border-blue-700">
           <div className="flex items-center space-x-4 mb-8">
-            <div className="w-12 h-12 bg-blue-700 text-white rounded-xl flex items-center justify-center font-bold text-xl">03</div>
-            <h2 className="text-3xl font-serif font-bold text-slate-900">Tips for a Winning Submission</h2>
+            <div className="w-10 h-10 bg-white text-slate-900 flex items-center justify-center font-bold font-mono">03</div>
+            <h2 className="text-2xl font-serif font-bold">Recommendations for Success</h2>
           </div>
-          <div className="bg-slate-900 text-white rounded-3xl p-8 md:p-12 overflow-hidden relative">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 relative z-10">
-              <div className="space-y-6">
-                <h4 className="text-xl font-bold text-blue-400">Quantify Your Impact</h4>
-                <p className="text-slate-300">Numbers tell a powerful story. Instead of saying "helped many people," specify "provided 500 meals to 120 families over 6 months."</p>
-                
-                <h4 className="text-xl font-bold text-blue-400">Show Leadership</h4>
-                <p className="text-slate-300">Describe how the nominee took initiative, solved problems, or inspired others to join their cause.</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <div className="space-y-6">
+              <div>
+                <h4 className="text-xs font-bold text-blue-400 uppercase tracking-widest mb-2 underline">Quantify Data</h4>
+                <p className="text-xs text-slate-300 leading-relaxed">Provide specific metrics. Use "Distributed 500 lbs of food" instead of "Provided a lot of food."</p>
               </div>
-              <div className="space-y-6">
-                <h4 className="text-xl font-bold text-blue-400">Focus on "Why"</h4>
-                <p className="text-slate-300">The selection committee values heart. Explain the personal motivation and the specific community need being addressed.</p>
-                
-                <h4 className="text-xl font-bold text-blue-400">Be Specific</h4>
-                <p className="text-slate-300">Vivid details about a single event can be more memorable than a broad list of multiple small activities.</p>
+              <div>
+                <h4 className="text-xs font-bold text-blue-400 uppercase tracking-widest mb-2 underline">Leadership Evidence</h4>
+                <p className="text-xs text-slate-300 leading-relaxed">Detail instances where the nominee managed projects or coordinated other volunteers.</p>
               </div>
             </div>
-            {/* Subtle graphic element */}
-            <div className="absolute -bottom-12 -right-12 w-48 h-48 bg-blue-600 rounded-full blur-3xl opacity-20"></div>
+            <div className="space-y-6">
+              <div>
+                <h4 className="text-xs font-bold text-blue-400 uppercase tracking-widest mb-2 underline">Contextualize "Why"</h4>
+                <p className="text-xs text-slate-300 leading-relaxed">The committee values the personal motivation and the root cause being addressed.</p>
+              </div>
+              <div>
+                <h4 className="text-xs font-bold text-blue-400 uppercase tracking-widest mb-2 underline">Supporting Media</h4>
+                <p className="text-xs text-slate-300 leading-relaxed">High-resolution imagery of the nominee 'in action' is highly recommended for review.</p>
+              </div>
+            </div>
           </div>
         </section>
 
-        {/* Deadline Footer */}
-        <div className="text-center bg-blue-50 py-12 rounded-3xl border border-blue-100">
-          <p className="text-slate-600 mb-4">Questions about the guidelines?</p>
-          <a href="mailto:info@harriscountyyouth.org" className="text-2xl font-serif font-bold text-blue-700 hover:text-blue-800 transition-colors underline">
+        {/* Support Footer */}
+        <div className="text-center bg-slate-100 py-8 border-2 border-slate-300">
+          <p className="text-xs font-bold text-slate-600 mb-2 uppercase tracking-tight">Administrative Support</p>
+          <a href="mailto:info@harriscountyyouth.org" className="text-xl font-serif font-bold text-blue-900 hover:underline">
             info@harriscountyyouth.org
           </a>
-          <p className="mt-6 text-sm text-slate-500 uppercase tracking-widest font-bold">Closing March 31, 2026</p>
+          <p className="mt-4 text-[10px] font-mono text-slate-500 uppercase font-bold">DEADLINE: MARCH 31, 2026 (23:59 CST)</p>
         </div>
       </div>
     </div>
