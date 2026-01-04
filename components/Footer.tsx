@@ -33,7 +33,7 @@ const Footer: React.FC = () => {
             <h4 className="text-white font-semibold mb-4">Contact Us</h4>
             <p className="text-sm text-slate-400">
               Email: info@harriscountyyouth.org<br />
-              Phone: (713) 555-0128<br />
+              Phone: (713) 274-1100<br />
               Address: 1001 Preston St, Houston, TX 77002
             </p>
             <div className="mt-6 flex space-x-4">

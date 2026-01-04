@@ -12,7 +12,6 @@ const Apply: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // In a real app, this would send data to a server
     console.log('Form Submitted:', formData);
     setSubmitted(true);
     window.scrollTo(0, 0);
@@ -65,7 +64,6 @@ const Apply: React.FC = () => {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16 flex flex-col lg:flex-row gap-16">
-        {/* Form */}
         <div className="lg:w-2/3">
           <form onSubmit={handleSubmit} className="bg-white p-8 md:p-12 rounded-3xl shadow-xl border border-slate-100">
             <h2 className="text-2xl font-serif font-bold text-slate-900 mb-8">Nomination Form</h2>
@@ -119,31 +117,12 @@ const Apply: React.FC = () => {
               ></textarea>
             </div>
 
-            <div className="mb-10">
-              <label className="block text-sm font-semibold text-slate-700 mb-2">Supporting Documents</label>
-              <div className="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-slate-300 border-dashed rounded-xl hover:border-blue-500 transition-colors cursor-pointer">
-                <div className="space-y-1 text-center">
-                  <svg className="mx-auto h-12 w-12 text-slate-400" stroke="currentColor" fill="none" viewBox="0 0 48 48" aria-hidden="true">
-                    <path d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                  <div className="flex text-sm text-slate-600">
-                    <span className="relative cursor-pointer bg-white rounded-md font-medium text-blue-700 hover:text-blue-600 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-blue-500">
-                      Upload files
-                    </span>
-                    <p className="pl-1">or drag and drop</p>
-                  </div>
-                  <p className="text-xs text-slate-500">PDF, JPG, PNG up to 10MB</p>
-                </div>
-              </div>
-            </div>
-
             <button type="submit" className="w-full py-4 bg-blue-700 text-white font-bold rounded-xl hover:bg-blue-800 transition-all shadow-lg shadow-blue-200">
               Submit Nomination
             </button>
           </form>
         </div>
 
-        {/* Contact Info Sidebar */}
         <div className="lg:w-1/3 space-y-12">
           <div>
             <h3 className="text-xl font-bold text-slate-900 mb-6">Contact Information</h3>
@@ -163,7 +142,7 @@ const Apply: React.FC = () => {
                 </div>
                 <div>
                   <p className="text-sm font-semibold text-slate-900">Call Us</p>
-                  <p className="text-slate-500">(713) 555-0128</p>
+                  <p className="text-slate-500">(713) 274-1100</p>
                 </div>
               </div>
               <div className="flex items-start">
@@ -175,26 +154,6 @@ const Apply: React.FC = () => {
                   <p className="text-slate-500">1001 Preston St, Houston, TX 77002</p>
                 </div>
               </div>
-            </div>
-          </div>
-
-          <div className="bg-slate-50 p-8 rounded-2xl border border-slate-200">
-            <h3 className="text-lg font-bold text-slate-900 mb-4">Frequently Asked Questions</h3>
-            <div className="space-y-4">
-              <details className="group cursor-pointer">
-                <summary className="text-sm font-semibold text-slate-700 list-none flex justify-between items-center">
-                  Can I nominate myself?
-                  <span className="group-open:rotate-180 transition-transform">▾</span>
-                </summary>
-                <p className="text-xs text-slate-500 mt-2">Yes, self-nominations are encouraged as long as they are accompanied by a third-party reference.</p>
-              </details>
-              <details className="group cursor-pointer">
-                <summary className="text-sm font-semibold text-slate-700 list-none flex justify-between items-center">
-                  What are the judging criteria?
-                  <span className="group-open:rotate-180 transition-transform">▾</span>
-                </summary>
-                <p className="text-xs text-slate-500 mt-2">We look for sustained impact, originality of service, and clear leadership quality.</p>
-              </details>
             </div>
           </div>
         </div>
