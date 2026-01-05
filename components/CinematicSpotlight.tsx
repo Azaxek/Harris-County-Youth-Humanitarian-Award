@@ -16,19 +16,19 @@ const CinematicSpotlight: React.FC = () => {
       </div>
       
       <div className="flex flex-col lg:flex-row">
-        {/* Photo Container: Reduced width and height for a smaller presentation */}
-        <div className="lg:w-[280px] bg-slate-100 flex items-center justify-center border-r border-slate-300 overflow-hidden shrink-0">
-          <div className="relative w-full h-full min-h-[360px]">
+        {/* Photo Container: Optimized small footprint for the official portrait */}
+        <div className="lg:w-[260px] bg-slate-100 flex items-center justify-center border-r border-slate-300 overflow-hidden shrink-0">
+          <div className="relative w-full h-full min-h-[340px]">
             <img 
-              src="recipient_2025.jpg" 
-              className="w-full h-full object-cover transition-all duration-700 hover:grayscale-0 grayscale-20" 
+              src="recipient_2025.png" 
+              className="w-full h-full object-cover transition-all duration-700 hover:grayscale-0 grayscale-[15%]" 
               alt="Official Award Presentation of Aryav Agrawal" 
               onError={(e) => {
-                // Fallback if image isn't named correctly in folder yet
+                // Fallback if image isn't available
                 (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=800';
               }}
             />
-            <div className="absolute bottom-0 left-0 right-0 bg-slate-900/80 text-white p-2 text-[9px] font-mono border-t border-slate-700">
+            <div className="absolute bottom-0 left-0 right-0 bg-slate-900/80 text-white p-2 text-[9px] font-mono border-t border-slate-700 text-center">
               [ FIG 1.1 ] 2025 CEREMONY
             </div>
           </div>
