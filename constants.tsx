@@ -33,7 +33,7 @@ const getUniqueNames = (count: number): string[] => {
     const firstIdx = (seed * 13) % firstNamePool.length;
     const lastIdx = (seed * 17) % lastNamePool.length;
     const name = `${firstNamePool[firstIdx]} ${lastNamePool[lastIdx]}`;
-    // Ensure no repeats and specifically don't use "Aryav Agrawal" here so we can place him manually
+    // Specifically don't include "Aryav Agrawal" in the pool so he doesn't repeat elsewhere
     if (name !== "Aryav Agrawal") {
       names.add(name);
     }
@@ -53,7 +53,7 @@ const generateYearWinners = (year: number, index: number): AwardYear => {
     { name: allNames[startIdx + 2], placement: 'Third' }
   ];
 
-  // Restore Aryav Agrawal for the 2025 cycle
+  // Locked 2025 entry
   if (year === 2025) {
     winners[0].name = "Aryav Agrawal";
   }
