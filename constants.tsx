@@ -71,6 +71,5 @@ export const NAV_ITEMS = [
   { label: 'Home', path: '/' },
   { label: 'About', path: '/about' },
   { label: 'Guidelines', path: '/guidelines' },
-  { label: 'Winners Archive', path: '/archive' },
   { label: 'Apply 2026', path: '/apply' }
 ];

@@ -22,3 +22,11 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Gemini and other system files
+.gemini/
+.ollama/
+.kiro/
+.local/
+.gitconfig
+.lesshst
