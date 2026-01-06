@@ -13,6 +13,6 @@
     "esbuild": "^0.24.0"
   },
   "scripts": {
-    "build": "mkdir -p build && esbuild index.tsx --bundle --outfile=build/index.js --format=esm --loader:.tsx=tsx --loader:.ts=ts --minify --platform=browser --external:react --external:react-dom --external:react-router-dom --external:@google/genai && cp index.html build/"
+    "build": "mkdir -p build && esbuild index.tsx --bundle --outfile=build/index.js --format=esm --loader:.tsx=tsx --loader:.ts=ts --minify --platform=browser --external:react --external:react-dom --external:react-router-dom --external:@google/genai && cp index.html build/ && if exist public (xcopy /E /I /Y public\\* build\\) || (cp -r public/* build/ 2>/dev/null || true)"
   }
 }
