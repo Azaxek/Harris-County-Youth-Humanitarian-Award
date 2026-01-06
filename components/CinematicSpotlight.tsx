@@ -20,7 +20,7 @@ const CinematicSpotlight: React.FC = () => {
         <div className="w-full max-w-xs bg-slate-100 flex items-center justify-center overflow-hidden">
           <div className="relative w-full">
             <img 
-              src="image6.png" 
+              src="/image6.png" 
               className="w-full h-auto object-contain" 
               alt="Aryav Agrawal receiving the award with the president" 
               onError={(e) => {
